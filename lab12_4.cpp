@@ -2,6 +2,9 @@
 
 using namespace std;
 
+template <typename chadow>
+void mySwap(chadow&,chadow &);
+
 int main(){
 	int x, y;
 	string a, b;
@@ -28,5 +31,12 @@ int main(){
 	cout << "p = " << p << ", q = " << q << "\n";
 
 	return 0;
+}
+
+template < typename chadow>
+void mySwap(chadow &x,chadow &y){
+    chadow xx = x, yy = y;
+    x = yy;
+    y = xx;
 }
 
